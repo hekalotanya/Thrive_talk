@@ -1,0 +1,17 @@
+
+$color-blue : #62D0DF;
+
+
+.page {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  width: 100vw;
+  min-width: 360px;
+  overflow-x:hidden; 
+  
+  &__body {
+    margin: 0;
+  }
+    
+}

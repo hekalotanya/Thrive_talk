@@ -1,0 +1,32 @@
+.footer {
+    display: grid;
+    justify-content: space-around;
+    background-color: $color-blue;
+
+}
+
+.section__footer {
+    padding-top: 32px;
+    height: 80px;
+    width: 1000px;
+
+    @include Full {
+        width: 1440px;
+    }
+    
+    &__sign {
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 80px;
+        letter-spacing: -0.006em;
+    }
+
+        ::before {
+            content: "\00a9";
+            font-size: 14px;
+            line-height: 11px;
+            letter-spacing: -0.006em;
+            color: #FFFFFF;
+        }
+}

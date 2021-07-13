@@ -1,0 +1,45 @@
+.boxes-white {
+    display: grid;
+    justify-content: space-around;
+    
+}
+
+
+.section__boxes-block {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, 240px);
+    margin-top: 22px;
+    width: 1000px;
+
+    @include Full {
+        width: 1440px;
+    }
+
+    
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        
+
+        &__title {
+            font-size: 28px;
+            line-height: 33px;
+            letter-spacing: -0.03em;
+            color: #22356F;
+            font-weight: normal;
+        }
+        &__text {
+            width: 298px;
+            font-size: 16px;
+            line-height: 25px;
+            letter-spacing: -0.03em;
+            color: rgba(34, 53, 111, 0.5);
+    
+        }
+
+    }
+
+}

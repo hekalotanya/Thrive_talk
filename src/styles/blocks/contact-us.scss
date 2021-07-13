@@ -1,0 +1,76 @@
+.contact-us {
+    background-color: #22356F;
+    display: grid;   
+    justify-content: space-around;
+}
+
+.section__contact-us {
+    display: flex;
+    flex-direction: row;
+    height: 800px;
+    justify-content: space-between;
+    width: 1000px;
+
+    @include Full {
+        width: 1440px;
+    }
+
+    &__content {
+        justify-self: center;
+        margin-top: 103px;
+        margin-bottom: 42px;
+        display: flex;
+        flex-direction: column;
+
+        &__title-1 {
+            .link-1 {
+                font-size: 16px;
+                line-height: 12px;
+                letter-spacing: 0.06em;
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 75px;
+            width: 579px;
+            height: 253px;
+            font-size: 36px;
+            line-height: 53px;
+            letter-spacing: -0.005em;
+            color: #FFFFFF;
+
+            .link-2 {
+                font-size: 16px;
+                line-height: 23px;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.1em;
+                text-decoration: none;
+                color: $color-blue;
+            }
+        }
+
+
+        &__title-2 {
+            margin-top: 230px;
+            font-size: 64px;
+            line-height: 94px;
+            letter-spacing: -0.01em;
+            color: #FFFFFF;
+        }
+    }
+
+    &__image {
+        width: 480px;
+        height: 800px;
+        background-image: url(https://smilekyle.com/wp-content/uploads/charles-etoroma-95uf6lxe-lo-unsplash-scaled.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+}

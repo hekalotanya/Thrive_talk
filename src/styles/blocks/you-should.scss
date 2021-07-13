@@ -1,0 +1,73 @@
+.you-should {
+    display: grid;   
+    justify-content: space-around;
+}
+
+.section__you-should {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    height: 800px;
+    justify-content: space-between;
+    width: 1000px;
+
+    @include Full {
+        width: 1440px;
+    }
+   
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        padding-top: 103px;
+
+        &__title {
+            font-size: 16px;
+            line-height: 12px;
+            letter-spacing: 0.06em;
+            color: #22356F;
+        }
+
+        &__text {
+            margin-top: 225px;
+            width: 675px;
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 53px;
+            letter-spacing: -0.01em;
+            color: #22356F;
+
+            span {
+                color: $color-blue;
+            }
+        }
+
+        &__button {
+            margin-top: 152px;
+            display: flex;
+            align-items: center;
+            
+            &__link {
+                text-decoration: none;
+                font-size: 16px;
+                line-height: 23px;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.1em;
+                color: #FAB63E;
+            }
+        
+        }
+    }
+
+    &__image {
+        width: 480px;
+        height: 800px;
+        background-image: url(https://i2.wp.com/www.sebazzo.com/wp-content/uploads/2018/02/linkedin-sales-navigator-402831.jpg?fit=800%2C1200&ssl=1);
+        background-position: right;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

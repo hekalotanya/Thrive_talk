@@ -1,0 +1,74 @@
+
+.boxes {
+    
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2);
+    margin-bottom: 12px;
+
+    @include Full {
+
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        align-items: center;
+        height: 480px;
+        background-color: #22356F;
+            
+
+            &-circle {
+                margin-top: 14px;
+                margin-left: 12px;
+                height: 12px;
+                width: 12px;
+                background-color: #E9B730;;
+                border-radius: 100%;
+                
+            }
+
+            &-text {
+                display: flex;
+                gap: 15px;
+                box-sizing: border-box;
+                margin-top: 72px;
+                padding-top: 23px;
+                font-size: 32px;
+                font-weight: bold;
+                line-height: 34px;
+                letter-spacing: -0.006em;
+                color: #FFFFFF;
+                width: 340px;
+                border-top: 1px solid #fff;
+            }
+        
+    }
+
+    :nth-child(2) {
+        background-color: #0052C1;
+    }
+
+    :nth-child(3) {
+        background-image: url(https://www.capitalr2r.co.uk/wp-content/uploads/sites/209/2018/10/joanna-kosinska-340748-unsplash-e1538145940437.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    :nth-child(4) {
+        background-color: $color-blue;
+    }
+
+    :nth-child(5) {
+        background-color: #DEE1FF;
+    }
+
+    :nth-child(6) {
+        background-color: #8F00FF;
+    }
+}

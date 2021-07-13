@@ -1,0 +1,64 @@
+.why {
+    
+    background-color: $color-blue;
+    display: grid;   
+    justify-content: space-around;
+
+    }
+
+
+.section__why {
+    display: flex;
+    flex-direction: row;
+    height: 604px;
+    justify-content: space-between;
+    width: 1000px;
+
+    @include Full {
+        width: 1440px;
+    }
+    
+
+    
+
+    &__content {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        min-width: 300px;
+        max-width: 596px;
+        
+        &__title {
+            margin: 0;
+            font-size: 36px;
+            line-height: 27px;
+            letter-spacing: -0.006em;
+            color: #FFFFFF;
+        }
+
+        &__text {
+            padding-top: 75px;
+            font-size: 20px;
+            line-height: 30px;
+            color: #FFFFFF;
+
+            span {
+                font-size: 24px;
+                line-height: 35px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__image {
+        justify-self: end;
+        width: 525px;
+        height: 604px;
+        background-image: url(https://i1.wp.com/austinbodycontouring.com/wp-content/uploads/2018/08/christopher-campbell-40367-unsplash-216461423-1534015318371.jpg?fit=3455%2C3455&ssl=1);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}

@@ -1,0 +1,120 @@
+.section__about-us {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 120px;
+
+    @include Full {
+
+        width: 1440px;
+        margin: 0 auto;
+    }
+    
+    
+    
+
+    .content {
+        display: flex;
+        padding-top: 156px;
+        justify-self: center;
+        width: 1000px;
+        margin: 0 auto;
+
+        @include Full {
+            width: 1440px;
+        }
+    
+
+        &__title {
+            width: 93px;
+            height: 210px;
+            font-size: 16px;
+            line-height: 23px;
+            letter-spacing: 0.06em;
+            color: #22356F;
+            text-transform: uppercase;
+
+        }
+
+        &__text {
+            margin-left: 225px;
+            width: 592px;
+            height: 210px;
+            font-size: 24px;
+            line-height: 34px;
+            letter-spacing: 0.005em;
+            color: #22356F;
+
+        }
+
+    }
+
+    .title {
+        margin: auto;
+        margin-top: 76px;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 0.06em;
+        color: rgba(34, 53, 111, 0.5);
+
+    }
+   
+    .square {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        margin-top: 24px;
+        
+        
+        
+
+
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            height: 360px;
+            align-items: center;
+            background-color: #FFE2DE;
+            
+
+            &__circle {
+                margin-top: 14px;
+                height: 9px;
+                width: 9px;
+                background-color: #E9B730;;
+                border-radius: 100%;
+                
+            }
+
+            &__text {
+                display: flex;
+                gap: 15px;
+                box-sizing: border-box;
+                margin-top: 72px;
+                padding-top: 23px;
+                font-size: 32px;
+                font-weight: bold;
+                line-height: 34px;
+                letter-spacing: -0.006em;
+                color: #FFFFFF;
+                width: 232px;
+                border-top: 1px solid #fff;
+            }
+        }
+
+
+        :nth-child(2) {
+            background-color: #C4E769;
+        }
+
+        :nth-child(3) {
+            background-color: $color-blue;
+        }
+
+        :nth-child(4) {
+            background-color: #0052C1;
+        }
+    }
+}
+
+

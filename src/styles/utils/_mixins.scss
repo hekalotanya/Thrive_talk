@@ -7,7 +7,7 @@
 
 @mixin Phone {
 
-  @media (min-width:0px) and (max-width:600px) {
+  @media (min-width:0px) and (max-width:640px) {
     @content;
   }
   
@@ -15,7 +15,7 @@
 
 @mixin Tablet {
 
-  @media (min-width:600px) and (max-width:1439px)  {
+  @media (min-width:640px) and (max-width:1024px)  {
     @content;
   }
   
@@ -23,7 +23,15 @@
 
 @mixin Full {
 
-  @media (min-width:1920px)  {
+  @media (min-width:1441px)  {
+    @content;
+  }
+  
+}
+
+@mixin Desktop {
+
+  @media (min-width:1024px)  {
     @content;
   }
   
