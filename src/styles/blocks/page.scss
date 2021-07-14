@@ -2,15 +2,11 @@
 $color-blue : #62D0DF;
 
 
-.page {
+.page__body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
   width: 100vw;
   overflow-x:hidden; 
-  
-  &__body {
-    margin: 0;
-  }
-    
+   
 }
