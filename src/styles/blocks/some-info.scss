@@ -1,24 +1,40 @@
 .some-info {
     
-    display: grid;   
+    display: flex;   
     justify-content: space-around;
+
+    @include Tablet  {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    @include Phone  {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
 }
 
 .section__some-info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 380px;
     gap: 20px;
     width: 80vw;
 
-    @include Tablet {
-        height: 260px;
-    }
+   
 
     @include Phone {
         height: max-content;
-        
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+    }
+
+    @include Tablet {
+        height: max-content;
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
     }
 
     @include Full {
@@ -28,35 +44,31 @@
 
     &__image {
         overflow: hidden;
-        
+         @include Desktop {
+            width: 570px;
+         }
 
         .image {
             height: 380px;
-            max-width: 570px;
-            min-width: 360px;
+            width: 100%;
             background-image: url(http://www.drqdentalsd.com/wp-content/uploads/2015/11/autumn-goodman-242825-1500px.jpg);
             background-position: center;
             background-size: cover;
             transform: scale(1);
             transition: all 0.3s;
 
+
             @include Tablet {
-                height: 260px;
-                max-width: 400px;
-                min-width: 252px;
-            }
-
-            @include Phone {
-                height: 180px;
-                max-width: 190px;
-                min-width: 120px;
-            }
-
-            @media (max-width:500px) {
-                height: 320px;
-                width: 150px;
+                width: 100vw;
+                height: 380px
                 
             }
+    
+            @include Phone {
+                width: 100vw;
+                height: 380px
+            }
+
         }
 
         .image:hover {
@@ -71,19 +83,17 @@
                 
 
         @include Tablet {
+            margin-left: 10vw; 
             padding-top: 50px;
+            margin-right: 10vw;
         }
 
         @include Phone {
-            padding-top: 33px;
-        }
-
-        @media (max-width:500px) {
             flex-direction: column;
-            gap: 20px;
-            justify-content: start
+            gap: 20px; 
+            padding-top: 33px;
+            margin-left: 10vw;    
         }
-        
 
         &__item {
             gap: 70px;
@@ -91,17 +101,16 @@
             flex-direction: column;
             min-width: 170px;
             max-width: 207px;
+    
 
             @include Tablet {
                 gap: 35px;
-                min-width: 85px;
-                max-width: 135px;
+                width: 125px;
             }
 
             @include Phone {
                 gap: 23px;
-                min-width: 85px;
-                max-width: 93px;
+                width: 150px;
             }
         
 
@@ -115,12 +124,12 @@
 
                 @include Tablet {
                     height: 24px;
-                    font-size: 7px;
+                    font-size: 14px;
                 }
 
                 @include Phone {
-                    height: 16px;
-                    font-size: 6px;
+                    height: 14px;
+                    font-size: 14px;
                 }
             }
 
@@ -132,13 +141,13 @@
                 color: rgba(34, 53, 111, 0.5);
 
                 @include Tablet {
-                    font-size: 7px;
-                    line-height: 12px;
+                    font-size: 14px;
+                    line-height: 23px;
                 }
 
                 @include Phone {
-                    font-size: 6px;
-                    line-height: 10px;
+                    font-size: 14px;
+                    line-height: 23px;
                 }
 
                 .tel {

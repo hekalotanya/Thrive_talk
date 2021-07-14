@@ -17,12 +17,12 @@
 
     @include Tablet {
         padding-top: 16px;
-        height: 40px;
+        height: 60px;
     }
 
     @include Phone {
         padding-top: 10px;
-        height: 27px;
+        height: 40px;
     }
     
     &__sign {
@@ -33,13 +33,13 @@
         letter-spacing: -0.006em;
 
         @include Tablet {
-            font-size: 7px;
-            line-height: 40px;
+            font-size: 12px;
+            line-height: 60px;
         }
 
         @include Phone {
-            font-size: 5px;
-            line-height: 27px;
+            font-size: 10px;
+            line-height: 40px;
         }
     }
 
@@ -51,12 +51,12 @@
             color: #FFFFFF;
 
             @include Tablet {
-                font-size: 7px;
+                font-size: 12px;
                 line-height: 5px;
             }
 
             @include Phone {
-                font-size: 5px;
+                font-size: 10px;
                 line-height: 3px;
             }
         }
