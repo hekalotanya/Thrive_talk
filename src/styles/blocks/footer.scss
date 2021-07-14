@@ -8,10 +8,21 @@
 .section__footer {
     padding-top: 32px;
     height: 80px;
-    width: 1000px;
+    width: 80vw;
 
     @include Full {
-        width: 1440px;
+        width: 1080px;
+        
+    }
+
+    @include Tablet {
+        padding-top: 16px;
+        height: 40px;
+    }
+
+    @include Phone {
+        padding-top: 10px;
+        height: 27px;
     }
     
     &__sign {
@@ -20,6 +31,16 @@
         font-weight: bold;
         line-height: 80px;
         letter-spacing: -0.006em;
+
+        @include Tablet {
+            font-size: 7px;
+            line-height: 40px;
+        }
+
+        @include Phone {
+            font-size: 5px;
+            line-height: 27px;
+        }
     }
 
         ::before {
@@ -28,5 +49,15 @@
             line-height: 11px;
             letter-spacing: -0.006em;
             color: #FFFFFF;
+
+            @include Tablet {
+                font-size: 7px;
+                line-height: 5px;
+            }
+
+            @include Phone {
+                font-size: 5px;
+                line-height: 3px;
+            }
         }
 }

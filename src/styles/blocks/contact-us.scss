@@ -7,20 +7,37 @@
 .section__contact-us {
     display: flex;
     flex-direction: row;
+    gap: 10px;
     height: 800px;
     justify-content: space-between;
-    width: 1000px;
+    width: 80vw;
 
     @include Full {
-        width: 1440px;
+        width: 1080px;
+    }
+
+    @include Tablet {
+        height: 600px;
+    }
+
+    @include Phone {
+        height: 560px;
     }
 
     &__content {
         justify-self: center;
-        margin-top: 103px;
+        justify-content: space-evenly;
         margin-bottom: 42px;
         display: flex;
         flex-direction: column;
+
+        @include Tablet {
+            margin-bottom: 22px;
+        }
+
+        @include Phone {
+            margin-bottom: 15px;
+        }
 
         &__title-1 {
             .link-1 {
@@ -29,6 +46,21 @@
                 letter-spacing: 0.06em;
                 color: #FFFFFF;
                 text-decoration: none;
+                transition: all 0.3s;
+
+                @include Tablet {
+                    font-size: 8px;
+                    line-height: 6px;
+                }
+
+                @include Phone {
+                    font-size: 6px;
+                    line-height: 7px;
+                }
+            }
+
+            .link-1:hover {
+                color: lighten($color: #22356F, $amount: 50);
             }
 
         }
@@ -38,12 +70,28 @@
             flex-direction: column;
             justify-content: space-between;
             margin-top: 75px;
-            width: 579px;
+            max-width: 579px;
             height: 253px;
             font-size: 36px;
             line-height: 53px;
             letter-spacing: -0.005em;
             color: #FFFFFF;
+
+            @include Tablet {
+                margin-top: 33px;
+                max-width: 300px;
+                height: 150px;
+                font-size: 18px;
+                line-height: 26px;
+            }
+
+            @include Phone {
+                margin-top: 25px;
+                max-width: 200px;
+                height: 150px;
+                font-size: 12px;
+                line-height: 18px;
+            }
 
             .link-2 {
                 font-size: 16px;
@@ -53,24 +101,68 @@
                 letter-spacing: 0.1em;
                 text-decoration: none;
                 color: $color-blue;
+                transition: all 0.3s;
+
+                @include Tablet {
+                    font-size: 8px;
+                    line-height: 12px;
+                }
+
+                @include Phone {
+                    font-size: 6px;
+                    line-height: 8px;
+                }
+            }
+
+            .link-2:hover {
+                color: darken($color:$color-blue, $amount: 10);
             }
         }
 
 
         &__title-2 {
-            margin-top: 230px;
             font-size: 64px;
             line-height: 94px;
             letter-spacing: -0.01em;
             color: #FFFFFF;
+
+            @include Tablet {
+                font-size: 32px;
+                line-height: 47px;
+            }
+
+            @include Phone {
+                font-size: 22px;
+                line-height: 32px;
+            }
         }
     }
 
     &__image {
-        width: 480px;
-        height: 800px;
-        background-image: url(https://smilekyle.com/wp-content/uploads/charles-etoroma-95uf6lxe-lo-unsplash-scaled.jpg);
-        background-position: center;
-        background-size: cover;
+        overflow: hidden;
+        
+        .image {
+            width: 480px;
+            height: 800px;
+            background-image: url(https://smilekyle.com/wp-content/uploads/charles-etoroma-95uf6lxe-lo-unsplash-scaled.jpg);
+            background-position: center;
+            background-size: cover;
+            transform: scale(1);
+            transition: all 0.3s;
+
+            @include Tablet {
+                width: 360px;
+                height: 600px;
+            }
+
+            @include Phone {
+                width: 336px;
+                height: 560px;
+            }
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
     }
 }

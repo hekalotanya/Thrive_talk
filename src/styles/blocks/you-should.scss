@@ -10,10 +10,22 @@
     gap: 30px;
     height: 800px;
     justify-content: space-between;
-    width: 1000px;
+    width: 80vw;
 
     @include Full {
-        width: 1440px;
+        width: 1080px;
+    }
+
+    @include Tablet {
+        margin-top: 20px;
+        gap: 15px;
+        height: 600px;
+    }
+
+    @include Phone {
+        margin-top: 13px;
+        gap: 10px;
+        height: 560px;
     }
    
 
@@ -21,23 +33,43 @@
         display: flex;
         flex-direction: column;
         justify-self: center;
-        padding-top: 103px;
+        justify-content: space-evenly;
 
         &__title {
             font-size: 16px;
             line-height: 12px;
             letter-spacing: 0.06em;
             color: #22356F;
+
+            @include Tablet {
+                font-size: 8px;
+            }
+
+            @include Phone {
+                font-size: 6px;
+            }
         }
 
         &__text {
-            margin-top: 225px;
-            width: 675px;
+            max-width: 675px;
+            width: 30vw;
             font-size: 36px;
             font-weight: bold;
             line-height: 53px;
             letter-spacing: -0.01em;
             color: #22356F;
+
+            @include Tablet {
+                max-width: 350px;
+                font-size: 18px;
+                line-height: 26px;
+            }
+
+            @include Phone {
+                max-width: 230px;
+                font-size: 12px;
+                line-height: 17px;
+            }
 
             span {
                 color: $color-blue;
@@ -45,7 +77,6 @@
         }
 
         &__button {
-            margin-top: 152px;
             display: flex;
             align-items: center;
             
@@ -57,17 +88,52 @@
                 align-items: center;
                 letter-spacing: 0.1em;
                 color: #FAB63E;
+                transition: all 0.3s;
+
+                @include Tablet {
+                    font-size: 8px;
+                    line-height: 12px;
+                }
+
+                @include Phone {
+                    font-size: 6px;
+                    line-height: 7px;
+                }
+            }
+
+            &__link:hover {
+                color: darken($color:#FAB63E, $amount: 10);
             }
         
         }
     }
 
     &__image {
-        width: 480px;
-        height: 800px;
-        background-image: url(https://i2.wp.com/www.sebazzo.com/wp-content/uploads/2018/02/linkedin-sales-navigator-402831.jpg?fit=800%2C1200&ssl=1);
-        background-position: right;
-        background-size: cover;
-        background-repeat: no-repeat;
+        overflow: hidden;
+        
+        .image {
+            width: 480px;
+            height: 800px;
+            background-image: url(https://i2.wp.com/www.sebazzo.com/wp-content/uploads/2018/02/linkedin-sales-navigator-402831.jpg?fit=800%2C1200&ssl=1);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transform: scale(1);
+            transition: all 0.3s;
+
+            @include Tablet {
+                width: 360px;
+                height: 600px;
+            }
+
+            @include Phone {
+                width: 336px;
+                height: 560px;
+            }
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
     }
 }

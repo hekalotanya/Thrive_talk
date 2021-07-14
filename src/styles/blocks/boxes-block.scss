@@ -10,10 +10,21 @@
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, 240px);
     margin-top: 22px;
-    width: 1000px;
+    width: 80vw;
+    gap: 10px;
+
+    @include Tablet {
+        margin-top: 11px;
+        grid-template-rows: repeat(2, 150px);
+    }
+
+    @include Phone {
+        margin-top: 7px;
+        grid-template-rows: repeat(2, 100px);
+    }
 
     @include Full {
-        width: 1440px;
+        width: 1080px;
     }
 
     
@@ -30,13 +41,35 @@
             letter-spacing: -0.03em;
             color: #22356F;
             font-weight: normal;
+
+            @include Tablet {
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            @include Phone {
+                font-size: 9px;
+                line-height: 11px;
+            }
         }
         &__text {
-            width: 298px;
+            max-width: 298px;
             font-size: 16px;
             line-height: 25px;
             letter-spacing: -0.03em;
             color: rgba(34, 53, 111, 0.5);
+
+            @include Tablet {
+                max-width: 160px;
+                font-size: 8px;
+                line-height: 12px;
+            }
+
+            @include Phone {
+                max-width: 108px;
+                font-size: 6px;
+                line-height: 7px;
+            }
     
         }
 

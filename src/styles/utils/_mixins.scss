@@ -1,5 +1,5 @@
 @mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
+  transition: #{$_property} 1s;
   &:hover {
     #{$_property}: $_toValue;
   }
@@ -7,7 +7,7 @@
 
 @mixin Phone {
 
-  @media (min-width:0px) and (max-width:640px) {
+  @media (max-width:640px) {
     @content;
   }
   

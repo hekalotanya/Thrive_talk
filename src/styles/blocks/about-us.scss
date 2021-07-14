@@ -1,11 +1,16 @@
+.about-us {
+    display: grid;   
+    justify-content: space-around;
+}
+
 .section__about-us {
     display: flex;
     flex-direction: column;
-    margin-bottom: 120px;
+    
 
     @include Full {
 
-        width: 1440px;
+        width: 1080px;
         margin: 0 auto;
     }
     
@@ -14,17 +19,27 @@
 
     .content {
         display: flex;
-        padding-top: 156px;
-        justify-self: center;
-        width: 1000px;
-        margin: 0 auto;
+        padding-top: 56px;
+        width: 80vw;
+        justify-content: space-between;
+        gap: 10px;
 
+        @include Tablet {
+            padding-top: 28px;
+        }
+
+        @include Phone {
+            padding-top: 20px;
+        }
+        
+    
         @include Full {
-            width: 1440px;
+            width: 1080px;
         }
     
 
         &__title {
+            margin: 0;
             width: 93px;
             height: 210px;
             font-size: 16px;
@@ -33,16 +48,44 @@
             color: #22356F;
             text-transform: uppercase;
 
+            @include Tablet {
+                width: 46px;
+                height: 105px;
+                font-size: 8px;
+                line-height: 12px;
+            }
+
+            @include Phone {
+                width: 31px;
+                height: 70px;
+                font-size: 8px;
+                line-height: 12px;
+            }
+
         }
 
         &__text {
-            margin-left: 225px;
+            
             width: 592px;
             height: 210px;
             font-size: 24px;
             line-height: 34px;
             letter-spacing: 0.005em;
             color: #22356F;
+
+            @include Tablet {
+                width: 296px;
+                height: 105px;
+                font-size: 12px;
+                line-height: 17px;
+            }
+
+            @include Phone {
+                width: 300px;
+                height: 70px;
+                font-size: 8px;
+                line-height: 12px;
+            }
 
         }
 
@@ -57,63 +100,131 @@
         letter-spacing: 0.06em;
         color: rgba(34, 53, 111, 0.5);
 
+        @include Tablet {
+            margin-top: 38px;
+            font-size: 8px;
+            line-height: 10px;
+        }
+
+        @include Phone {
+            margin-top: 35px;
+            font-size: 8px;
+            line-height: 10px;
+        }
+
     }
    
-    .square {
-        display: grid;
-        grid-template-columns: repeat(4, 25%);
-        margin-top: 24px;
-        
-        
+}
+
+.square {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    margin-top: 24px; 
+    overflow: hidden;
+
+    @include Tablet {
+        margin-top: 12px;
+    }
+
+    @include Phone {
+        margin-top: 8px;
+    }
+    
+    @include Full {
+
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+   
+    .item {
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        align-items: center;
+        background-color: #FFE2DE;
+        transform: scale(1);
+        transition: all 0.3s;
+
+        @include Tablet {
+            height: 180px;
+        }
         
 
+        @include Phone {
+            height: 120px;
+        }
 
+        &__circle {
+            margin-top: 14px;
+            height: 9px;
+            width: 9px;
+            background-color: #E9B730;;
+            border-radius: 100%;
 
-        .item {
-            display: flex;
-            flex-direction: column;
-            height: 360px;
-            align-items: center;
-            background-color: #FFE2DE;
+            @include Tablet {
+                margin-top: 7px;
+                height: 4px;
+                width: 4px;
+            }
+
             
+            @include Phone {
+                margin-top: 5px;
+                height: 3px;
+                width: 3px;
+            }
+            
+        }
 
-            &__circle {
-                margin-top: 14px;
-                height: 9px;
-                width: 9px;
-                background-color: #E9B730;;
-                border-radius: 100%;
-                
+        &__text {
+            display: flex;
+            gap: 15px;
+            box-sizing: border-box;
+            margin-top: 72px;
+            padding-top: 23px;
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 34px;
+            letter-spacing: -0.006em;
+            color: #FFFFFF;
+            width: 232px;
+            border-top: 1px solid #fff;
+
+            @include Tablet {
+                gap: 8px;
+                margin-top: 36px;
+                padding-top: 12px;
+                font-size: 16px;
+                line-height: 17px;
+                width: 116px;
             }
 
-            &__text {
-                display: flex;
-                gap: 15px;
-                box-sizing: border-box;
-                margin-top: 72px;
-                padding-top: 23px;
-                font-size: 32px;
-                font-weight: bold;
-                line-height: 34px;
-                letter-spacing: -0.006em;
-                color: #FFFFFF;
-                width: 232px;
-                border-top: 1px solid #fff;
+            @include Phone {
+                gap: 5px;
+                margin-top: 24px;
+                padding-top: 7px;
+                font-size: 11px;
+                line-height: 12px;
+                width: 77px;
             }
         }
+    }
+
+    .item:hover {
+        transform: scale(0.9);
+    }
 
 
-        :nth-child(2) {
-            background-color: #C4E769;
-        }
+    :nth-child(2) {
+        background-color: #C4E769;
+    }
 
-        :nth-child(3) {
-            background-color: $color-blue;
-        }
+    :nth-child(3) {
+        background-color: $color-blue;
+    }
 
-        :nth-child(4) {
-            background-color: #0052C1;
-        }
+    :nth-child(4) {
+        background-color: #0052C1;
     }
 }
 

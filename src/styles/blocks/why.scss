@@ -12,10 +12,18 @@
     flex-direction: row;
     height: 604px;
     justify-content: space-between;
-    width: 1000px;
+    width: 80vw;
 
     @include Full {
-        width: 1440px;
+        width: 1080px;
+    }
+
+    @include Tablet {
+        height: 400px;
+    }
+
+    @include Phone {
+        height: max-content;
     }
     
 
@@ -27,8 +35,17 @@
         flex-direction: column;
         justify-content: center;
         
-        min-width: 300px;
-        max-width: 596px;
+        width: 30vw;
+        max-width: 575px;
+        padding-right: 15px;
+
+        @include Tablet {
+            max-width: 262px;
+        }
+
+        @include Phone {
+            max-width: 200px;
+        }
         
         &__title {
             margin: 0;
@@ -36,6 +53,16 @@
             line-height: 27px;
             letter-spacing: -0.006em;
             color: #FFFFFF;
+
+            @include Tablet {
+                font-size: 18px;
+                
+            }
+
+            @include Phone {
+                font-size: 12px;
+                
+            }
         }
 
         &__text {
@@ -44,21 +71,67 @@
             line-height: 30px;
             color: #FFFFFF;
 
+            @include Tablet {
+                padding-top: 37px;
+                font-size: 10px;
+                line-height: 15px;
+            }
+
+            @include Phone {
+                padding-top: 25px;
+                font-size: 7px;
+                line-height: 10px;
+            }
+
             span {
                 font-size: 24px;
                 line-height: 35px;
                 font-weight: bold;
+
+                @include Tablet {
+                    font-size: 12px;
+                    line-height: 17px;
+                }
+
+                @include Phone {
+                    font-size: 8px;
+                    line-height: 12px;
+                }
             }
         }
     }
 
     &__image {
-        justify-self: end;
-        width: 525px;
-        height: 604px;
-        background-image: url(https://i1.wp.com/austinbodycontouring.com/wp-content/uploads/2018/08/christopher-campbell-40367-unsplash-216461423-1534015318371.jpg?fit=3455%2C3455&ssl=1);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
 
+        overflow: hidden;
+        
+        .image {
+            justify-self: end;
+            width: 525px;
+            height: 604px;
+            background-image: url(https://i1.wp.com/austinbodycontouring.com/wp-content/uploads/2018/08/christopher-campbell-40367-unsplash-216461423-1534015318371.jpg?fit=3455%2C3455&ssl=1);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transform: scale(1);
+            transition: all 0.3s;
+        
+
+            @include Tablet {
+                width: 366px;
+                height: 400px;
+            }
+
+            @include Phone {
+                width: 205px;
+                height: 332px;
+
+            
+            }
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+    }
 }
