@@ -9,7 +9,6 @@
 }
 
 .section__footer {
-    padding-top: 32px;
     height: 80px;
     padding-left: 175px;
     padding-right: 175px;
@@ -18,18 +17,15 @@
         width: 1080px;
         padding-left: 0px;
         padding-right: 0px;
-        
     }
 
     @include Tablet {
-        padding-top: 16px;
         height: 60px;
         padding-left: 30px;
         padding-right: 30px;
     }
 
     @include Phone {
-        padding-top: 10px;
         height: 40px;
         padding-left: 16px;
         padding-right: 16px;
@@ -39,8 +35,8 @@
         color: #fff;
         font-size: 14px;
         font-weight: bold;
-        line-height: 80px;
         letter-spacing: -0.006em;
+        line-height: 80px;
 
         @include Tablet {
             font-size: 12px;

@@ -11,8 +11,8 @@
     flex-direction: column;
     height: 840px;
     width: 100vw;
-    margin-left: 175px;
-    margin-right: 175px;
+    padding-left: 175px;
+    padding-right: 175px;
 
     @include Full {
         width: 1080px;
@@ -20,14 +20,14 @@
 
     @include Tablet {
         height: max-content;
-        margin-left: 30px;
-        margin-right: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     @include Phone {
         height: 100vh;
-        margin-left: 16px;
-        margin-right: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
     
 
@@ -236,6 +236,7 @@
         .content__button {
             margin-top: 64px;
             display: flex;
+            
 
             @include Tablet {
                 margin-top: 45px;
@@ -253,18 +254,23 @@
                 line-height: 50px;
                 text-align: center;
                 letter-spacing: 0.1em;
-                color: #fff;
+                color: #F9B640;
                 text-decoration: none;
-                background-color: #F9B640;
+                background-color: #F4F9E2;
                 text-transform: uppercase;
                 cursor: pointer;
                 transition: all 0.4s;
+                margin-right: 38px;
+
+                @include Phone {
+                    font-size: 14px;
+                }
 
             }
             
             .button__button:hover {
-                background-color: #F4F9E2;
-                color: #F9B640;
+                background-color: #F9B640;
+                color: #F4F9E2;
             }
 
         }
