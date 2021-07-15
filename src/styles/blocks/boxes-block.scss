@@ -1,5 +1,5 @@
 .boxes-white {
-    display: grid;
+    display: flex;
     justify-content: space-around;
     
 }
@@ -10,17 +10,25 @@
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, 240px);
     margin-top: 22px;
-    width: 80vw;
-    gap: 10px;
+    width: 100vw;
+    margin-left: 175px;
+    margin-right: 175px;
+    
 
     @include Tablet {
         margin-top: 11px;
-        grid-template-rows: repeat(2, 150px);
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, 240px);
+        margin-left: 30px;
+        margin-right: 30px;
     }
 
     @include Phone {
         margin-top: 7px;
-        grid-template-rows: repeat(2, 100px);
+        margin-left: 16px;
+        margin-right: 16px;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(6, 240px);
     }
 
     @include Full {
@@ -43,13 +51,13 @@
             font-weight: normal;
 
             @include Tablet {
-                font-size: 14px;
-                line-height: 17px;
+                font-size: 28px;
+                line-height: 33px;
             }
 
             @include Phone {
-                font-size: 9px;
-                line-height: 11px;
+                font-size: 28px;
+                line-height: 33px;
             }
         }
         &__text {
@@ -60,15 +68,15 @@
             color: rgba(34, 53, 111, 0.5);
 
             @include Tablet {
-                max-width: 160px;
-                font-size: 8px;
-                line-height: 12px;
+                max-width: 298px;
+                font-size: 16px;
+                line-height: 25px;
             }
 
             @include Phone {
-                max-width: 108px;
-                font-size: 6px;
-                line-height: 7px;
+                width: 100vw;
+                font-size: 16px;
+                line-height: 25px;
             }
     
         }

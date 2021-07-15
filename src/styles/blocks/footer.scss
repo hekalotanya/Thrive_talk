@@ -1,28 +1,38 @@
 .footer {
     display: grid;
-    justify-content: space-around;
     background-color: $color-blue;
+
+    @include Full {
+        justify-content: space-around;
+    }
 
 }
 
 .section__footer {
     padding-top: 32px;
     height: 80px;
-    width: 80vw;
+    padding-left: 175px;
+    padding-right: 175px;
 
     @include Full {
         width: 1080px;
+        padding-left: 0px;
+        padding-right: 0px;
         
     }
 
     @include Tablet {
         padding-top: 16px;
         height: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     @include Phone {
         padding-top: 10px;
         height: 40px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
     
     &__sign {

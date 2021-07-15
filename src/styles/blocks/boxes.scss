@@ -8,15 +8,19 @@
 
     @include Tablet {
         margin-top: 60px;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3);
     }
 
     @include Phone {
         margin-top: 40px;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(6);
     }
 
     @include Full {
 
-        max-width: 1440px;
+        width: 1440px;
         margin: 0 auto;
     }
     
@@ -32,11 +36,11 @@
         
 
         @include Tablet {
-            height: 240px;
+            height: 480px;
         }
 
         @include Phone {
-            height: 160px;
+            height: 240px;
         }
             
 
@@ -48,19 +52,6 @@
                 background-color: #E9B730;;
                 border-radius: 100%;
                 
-                @include Tablet {
-                    margin-top: 7px;
-                    margin-left: 6px;
-                    height: 6px;
-                    width: 6px;
-                }
-
-                @include Phone {
-                    margin-top: 5px;
-                    margin-left: 4px;
-                    height: 4px;
-                    width: 4px;
-                }
             }
 
             &-text {
@@ -78,21 +69,12 @@
                 border-top: 1px solid #fff;
 
                 @include Tablet {
-                    gap: 7px;
-                    margin-top: 36px;
-                    padding-top: 12px;
-                    font-size: 16px;
-                    line-height: 17px;
-                    width: 170px;
+                    width: 300px;
                 }
 
                 @include Phone {
-                    gap: 5px;
-                    margin-top: 24px;
-                    padding-top: 7px;
-                    font-size: 11px;
-                    line-height: 12px;
-                    width: 100px;
+                    font-size: 28px;
+                    width: 300px;
                 }
             }
         

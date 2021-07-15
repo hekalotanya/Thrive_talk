@@ -18,15 +18,16 @@
     height: 800px;
     justify-content: space-between;
     width: 100vw;
-    margin-left: 10vw;
+    margin-left: 175px;
 
     @include Full {
         width: 1080px;
-        margin-right: 10vw;
+        margin-right: 175px;
     }
 
     @include Tablet {
         height: 800px;
+        margin-left: 30px;
     }
 
     @include Phone {
@@ -49,7 +50,7 @@
         @include Phone {
             margin-bottom: 15px;
             margin-top: 30px;
-            margin-left: 10vw;
+            margin-left: 16px;
             order: 2;
         }
 
