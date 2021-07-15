@@ -97,7 +97,9 @@
         @include Phone {
             flex-direction: column;
             padding-top: 33px;
-            margin-left: 16px;    
+            padding-left: 16px;
+            padding-right: 16px;
+            width: 100%;   
         }
 
         &__item {
@@ -112,7 +114,8 @@
             }
 
             @include Phone {
-                width: 150px;
+                width: 100%;
+                max-width: 100%;
             }
         
 

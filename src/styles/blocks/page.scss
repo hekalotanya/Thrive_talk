@@ -1,6 +1,10 @@
 
 $color-blue : #62D0DF;
 
+* {
+  box-sizing: border-box;
+}
+
 
 .page__body {
   margin: 0;
@@ -19,7 +23,7 @@ $color-blue : #62D0DF;
     transition: transform 0.3s;
 
     &:target {
-      transform: translateX(0); 
+      transform: translateX(0);
     }
   }
 
