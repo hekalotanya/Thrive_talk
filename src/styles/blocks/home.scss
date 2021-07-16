@@ -1,377 +1,343 @@
-.home {
-    background-color: #F4F9E2;
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 79px;
-    
+.section__home {
+  background-color: #F4F9E2;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 79px;    
 }
 
-.section__home {
-    display: flex;
-    flex-direction: column;
-    height: 840px;
-    width: 100vw;
-    padding-left: 175px;
-    padding-right: 175px;
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 840px;
+  width: 100vw;
+  padding-left: 175px;
+  padding-right: 175px;
+  padding-top: 16px;
 
-    @include Full {
-        width: 1080px;
+  @include Full {
+  width: 1080px;
+  }
+
+  @include Tablet {
+  height: max-content;
+  padding-left: 30px;
+  padding-right: 30px;
+  }
+
+  @include Phone {
+  height: 100vh;
+  padding-left: 16px;
+  padding-right: 16px;
+  }
+}
+
+.home__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: max-content;
+  
+  .logo {
+
+    &__link {
+      position: relative;
+      z-index: 1;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: -0.035em;
+      color: $color-blue;
+      text-decoration: none;
+      transition: all 0.3s;
     }
 
-    @include Tablet {
-        height: max-content;
-        padding-left: 30px;
-        padding-right: 30px;
+    &__link:hover {
+      color: darken($color:$color-blue, $amount: 10);
+    }
+  }
+  .icon {
+    display: none;
+    transform: scale(1);
+    transition: all 0.3s;
+
+    .icon__items {
+      display: flex;
+      flex-direction: column;
+
+      .item {
+         margin-bottom: 3px;
+        width: 30px;
+        height: 2px;
+        background-color: $color-blue;
+        border-radius: 30%;
+        transition: all 0.3s;
+      }
+
+      .item:hover {
+        background-color: darken($color: $color-blue, $amount: 10);
+      }
+
     }
 
     @include Phone {
-        height: 100vh;
-        padding-left: 16px;
-        padding-right: 16px;
+      display: inline;
     }
-    
+  }
 
-}
-.nav {
+  .icon:hover {
+    transform: scale(1.2);
+  }
+
+  .menu {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
     display: flex;
+    width: 234px;
     justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    
-    .logo {
 
-        &__link {
-            position: relative;
-            z-index: 1;
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: -0.035em;
-            color: $color-blue;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        &__link:hover {
-            color: darken($color:$color-blue, $amount: 10);
-        }
-
-    }
-    .icon {
-        display: none;
-        transform: scale(1);
-        transition: all 0.3s;
-
-        .icon__items {
-            display: flex;
-            flex-direction: column;
-
-            .item {
-                margin-bottom: 3px;
-                width: 30px;
-                height: 2px;
-                background-color: $color-blue;
-                border-radius: 30%;
-                transition: all 0.3s;
-            }
-
-            .item:hover {
-                background-color: darken($color: $color-blue, $amount: 10);
-            }
-
-        }
-
-        @include Phone {
-            display: inline;
-        }
+    @include Full {
+      width: 304px;
     }
 
-    .icon:hover {
-        transform: scale(1.2);
+    @include Tablet {
+      width: 200px;
     }
 
-    .menu {
-        box-sizing: border-box;
-        position: relative;
-        z-index: 1;
-        display: flex;
-        width: 234px;
-        justify-content: space-between;
-
-        @include Full {
-            width: 304px;
-        }
-
-        @include Tablet {
-            width: 200px;
-        }
-
-        @include Phone {
-            display: none;
-        }
-
-      
-
-        &__item {
-            font-size: 14px;
-            color: #22356F;
-            text-decoration: none;
-            box-sizing: border-box;
-            padding-bottom: 3px;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s;
-
-        }
-
+    @include Phone {
+      display: none;
     }
 
-    .button {
-        display: flex;
-        justify-content: center;
-        width: 150px;
-        height: 50px;
-        border-radius: 50px;
-        background-color: $color-blue;
-        z-index: 1;
-        transition: all 0.3s;
-
-        @include Phone {
-            width: 90px;
-            height: 30px;
-        }
-
-
-        &__link {
-            line-height: 50px;
-            font-size: 14px;
-            color: #fff;
-            text-decoration: none;
-            text-align: center;
-            font-weight: bold;
-
-            @include Phone {
-                line-height: 30px;
-                font-size: 11px;
-            }
-
-        }
+    &__item {
+      font-size: 14px;
+      color: #22356F;
+      text-decoration: none;
+      box-sizing: border-box;
+      padding-bottom: 3px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s;
     }
 
-    .button:hover {
-        background-color: darken($color:$color-blue, $amount: 10);
+    .menu__item:hover {
+      border-bottom: 2px solid #22356F;
     }
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: $color-blue;
+    z-index: 1;
+    transition: all 0.3s;
+
+    @include Phone {
+      width: 90px;
+      height: 30px;
+    }
+
+    &__link {
+      line-height: 50px;
+      font-size: 14px;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+
+      @include Phone {
+      line-height: 30px;
+      font-size: 11px;
+      }
+    }
+  }
+
+  .button:hover {
+    background-color: darken($color:$color-blue, $amount: 10);
+  }
 }
 
 .left {
 
+  &__content {
     display: flex;
     flex-direction: column;
-    grid-row: 2;
-    
-    
-    
-    &__content {
-        margin-top: 188px;
-        position: relative;
-        z-index: 1;
+    margin-top: 188px;
+    position: relative;
+    z-index: 1;
 
-        @include Phone {
-            margin-top: 50px;
-        }
-
-
-        .logo {
-            height: 64px;
-
-            &__link {
-                font-size: 24px;
-                font-weight: bold;
-                line-height: 27px;
-                letter-spacing: -0.035em;
-                color: $color-blue;
-                text-decoration: none;
-                transition: all 0.3s;    
-            }
-
-            &__link:hover {
-                color: darken($color:$color-blue, $amount: 10);
-            }
-            
-        }
-
-        .content__title {
-            height: 168px;
-            font-size: 48px;
-            line-height: 53px;
-            letter-spacing: -0.035em;
-            color: #22356F;
-            font-weight: bold;
-
-            @include Phone {
-                font-size: 23px;
-                line-height: 30px;
-                height: 120px;
-            }
-
-        }
-
-        .content__text {
-            height: 160px;
-            width: 469px;
-            font-size: 24px;
-            line-height: 42px;
-            color: #22356F;
-
-            @include Phone {
-                height: max-content;
-                width: 70vw;
-                font-size: 20px;
-                line-height: 34px;
-            }
-
-            @include Tablet {
-                height: max-content;
-            }
-        }
-
-        .content__button {
-            margin-top: 64px;
-            display: flex;
-            
-
-            @include Tablet {
-                margin-top: 45px;
-            }
-
-            @include Phone {
-                margin-top: 30px;
-            }
-
-            .button__button {
-                padding: 0;
-                height: 50px;
-                width: 150px;
-                font-size: 16px;
-                line-height: 50px;
-                text-align: center;
-                letter-spacing: 0.1em;
-                color: #F9B640;
-                text-decoration: none;
-                background-color: #F4F9E2;
-                text-transform: uppercase;
-                cursor: pointer;
-                transition: all 0.4s;
-                margin-right: 38px;
-
-                @include Phone {
-                    font-size: 14px;
-                }
-
-            }
-            
-            .button__button:hover {
-                background-color: #F9B640;
-                color: #F4F9E2;
-            }
-
-        }
-
+    @include Phone {
+      margin-top: 50px;
     }
 
-}
+    .logo {
+      height: 64px;
 
+      &__link {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 27px;
+        letter-spacing: -0.035em;
+        color: $color-blue;
+        text-decoration: none;
+        transition: all 0.3s;    
+      }
+
+      &__link:hover {
+        color: darken($color:$color-blue, $amount: 10);
+      }            
+    }
+
+    .content__title {
+      height: 168px;
+      font-size: 48px;
+      line-height: 53px;
+      letter-spacing: -0.035em;
+      color: #22356F;
+      font-weight: bold;
+
+      @include Phone {
+        font-size: 23px;
+        line-height: 30px;
+        height: 100px;
+      }
+    }
+
+    .content__text {
+      width: 469px;
+      font-size: 24px;
+      line-height: 42px;
+      color: #22356F;
+
+      @include Phone {
+        height: max-content;
+        width: 70vw;
+        font-size: 20px;
+        line-height: 34px;
+      }
+
+      @include Tablet {
+        height: max-content;
+      }
+    }
+
+    .content__button {
+      margin-top: 64px;
+      display: flex;
+      
+      @include Tablet {
+        margin-top: 45px;
+      }
+
+      @include Phone {
+        margin-top: 30px;
+        flex-direction: column;
+      }
+
+      .button__button {
+        padding: 0;
+        height: 50px;
+        width: 150px;
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: #F9B640;
+        text-decoration: none;
+        background-color: #F4F9E2;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.4s;
+        margin-right: 38px;
+        border: 1px solid #f9b640;
+
+        @include Phone {
+          font-size: 14px;
+          margin-bottom: 20px;
+          width: 100%;
+        }
+      }
+      
+      .button__button:hover {
+        background-color: #F9B640;
+        color: #F4F9E2;
+      }
+    }
+  }
+}
 
 .right {
 
-    &__circle {
-        position: absolute;
-        right: -166px;
-        top: 40px;
-        width: 808px;
-        height: 544px;
-        background: #EDFDFF;
-        border-radius: 312.159px;
-        transform: matrix(-0.5, 0.87, 0.87, 0.5, 0, 0);
-
-        @include Tablet {
-            width: 560px;
-            height: 380px;
-        }
-
-        @include Phone {
-            width: 360px;
-            height: 180px;
-            right: -92px;
-            top: 75px;
-        }
-
-    }
-
-    .circle-2 {
-        position: absolute;
-        border-radius: 312.159px;
-        right: -200px;
-        top: 118px;
-        height: 544px;
-        width: 808px;
-        overflow: hidden;
-        transform: matrix(0.87, -0.5, 0.5, 0.87, 0, 0);
-
-        @include Tablet {
-            width: 560px;
-            height: 380px;
-        }
-
-        @include Phone {
-            width: 360px;
-            height: 180px;
-            right: -208px;
-            top: 70px;
-        }
-
-        @media (min-width:500px) {
-            right: -73px;
-            top: 113px;
-        }
-
-        &__image {
-            position: absolute;
-            bottom: -150px;
-            width: 800px;
-            height: 800px; 
-            background-image: url(http://legacycompany.org/wp-content/uploads/2018/11/cropped-linkedin-sales-navigator-406825-unsplash.jpg);
-            background-size: cover;   
-            background-position: right;
-            transform: rotate(30deg);
-            
-            @include Tablet {
-                width: 560px;
-                height: 638px; 
-            }
-
-            @include Phone {
-                width: 314px;
-                height: 445px;       
-            }
-        }
-
-    }
-
-}
-
-.menu__item:hover {
-    border-bottom: 2px solid #22356F;
-}
-
-.section__home__left__nav__logo__link {
-    @include Phone {
-        font-size: 14px;
-        
-    }
+  &__circle {
+    position: absolute;
+    right: -166px;
+    top: 40px;
+    width: 808px;
+    height: 544px;
+    background: #EDFDFF;
+    border-radius: 312.159px;
+    transform: matrix(-0.5, 0.87, 0.87, 0.5, 0, 0);
 
     @include Tablet {
-        font-size: 24px;
-    
+      width: 560px;
+      height: 380px;
     }
+
+    @include Phone {
+      width: 360px;
+      height: 180px;
+      right: -92px;
+      top: 75px;
+    }
+  }
+
+  .circle-2 {
+    position: absolute;
+    border-radius: 312.159px;
+    right: -200px;
+    top: 118px;
+    height: 544px;
+    width: 808px;
+    overflow: hidden;
+    opacity: 0.5;
+    transform: matrix(0.87, -0.5, 0.5, 0.87, 0, 0);
+
+    @include Tablet {
+      width: 560px;
+      height: 380px;
+    }
+
+    @include Phone {
+      width: 360px;
+      height: 180px;
+      right: -208px;
+      top: 70px;
+    }
+
+    @media (min-width:500px) {
+      right: -73px;
+      top: 113px;
+    }
+
+    &__image {
+      position: absolute;
+      bottom: -150px;
+      width: 800px;
+      height: 800px; 
+      background-image: url(http://legacycompany.org/wp-content/uploads/2018/11/cropped-linkedin-sales-navigator-406825-unsplash.jpg);
+      background-size: cover;   
+      background-position: right;
+      transform: rotate(30deg);
+      
+      @include Tablet {
+        width: 560px;
+        height: 638px; 
+      }
+
+      @include Phone {
+        width: 314px;
+        height: 445px;       
+      }
+    }
+  }
 }
-
-

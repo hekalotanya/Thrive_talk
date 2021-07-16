@@ -1,86 +1,78 @@
-.boxes-white {
-    display: flex;
-    justify-content: space-around;
-    
+.section__boxes-white {
+  display: flex;
+  justify-content: space-around;    
 }
 
+.boxes-white {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, 240px);
+  margin-top: 22px;
+  width: 100vw;
+  padding-left: 175px;
+  padding-right: 175px;    
 
-.section__boxes-block {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2, 240px);
-    margin-top: 22px;
-    width: 100vw;
-    margin-left: 175px;
-    margin-right: 175px;
+  @include Tablet {
+    margin-top: 11px;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, 240px);
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include Phone {
+    margin-top: 7px;
+    padding-left: 16px;
+    padding-right: 16px;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(6, 240px);
+  }
+
+  @include Full {
+    width: 1080px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
     
+    &__title {
+      font-size: 28px;
+      line-height: 33px;
+      letter-spacing: -0.03em;
+      color: #22356F;
+      font-weight: normal;
 
-    @include Tablet {
-        margin-top: 11px;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(3, 240px);
-        margin-left: 30px;
-        margin-right: 30px;
+      @include Tablet {
+        font-size: 28px;
+        line-height: 33px;
+      }
+
+      @include Phone {
+        font-size: 28px;
+        line-height: 33px;
+      }
     }
 
-    @include Phone {
-        margin-top: 7px;
-        margin-left: 16px;
-        margin-right: 16px;
-        grid-template-columns: repeat(1, auto);
-        grid-template-rows: repeat(6, 240px);
+    &__text {
+      max-width: 298px;
+      font-size: 16px;
+      line-height: 25px;
+      letter-spacing: -0.03em;
+      color: rgba(34, 53, 111, 0.5);
+
+      @include Tablet {
+        max-width: 298px;
+        font-size: 16px;
+        line-height: 25px;
     }
 
-    @include Full {
-        width: 1080px;
+      @include Phone {
+        width: 100vw;
+        font-size: 16px;
+        line-height: 25px;
+      }
     }
-
-    
-
-    &__item {
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
-        
-
-        &__title {
-            font-size: 28px;
-            line-height: 33px;
-            letter-spacing: -0.03em;
-            color: #22356F;
-            font-weight: normal;
-
-            @include Tablet {
-                font-size: 28px;
-                line-height: 33px;
-            }
-
-            @include Phone {
-                font-size: 28px;
-                line-height: 33px;
-            }
-        }
-        &__text {
-            max-width: 298px;
-            font-size: 16px;
-            line-height: 25px;
-            letter-spacing: -0.03em;
-            color: rgba(34, 53, 111, 0.5);
-
-            @include Tablet {
-                max-width: 298px;
-                font-size: 16px;
-                line-height: 25px;
-            }
-
-            @include Phone {
-                width: 100vw;
-                font-size: 16px;
-                line-height: 25px;
-            }
-    
-        }
-
-    }
-
+  }
 }

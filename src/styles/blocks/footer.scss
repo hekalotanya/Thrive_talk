@@ -1,69 +1,68 @@
-.footer {
-    display: grid;
-    background-color: $color-blue;
+.section__footer {
+  display: grid;
+  background-color: $color-blue;
 
-    @include Full {
-        justify-content: space-around;
-    }
-
+  @include Full {
+    justify-content: space-around;
+  }
 }
 
-.section__footer {
-    height: 80px;
-    padding-left: 175px;
-    padding-right: 175px;
+.footer {
+  height: 80px;
+  padding-left: 175px;
+  padding-right: 175px;
 
-    @include Full {
-        width: 1080px;
-        padding-left: 0px;
-        padding-right: 0px;
-    }
+  @include Full {
+    width: 1080px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  @include Tablet {
+    height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include Phone {
+    height: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  &__sign {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -0.006em;
+    line-height: 80px;
 
     @include Tablet {
-        height: 60px;
-        padding-left: 30px;
-        padding-right: 30px;
+      font-size: 12px;
+      line-height: 60px;
     }
 
     @include Phone {
-        height: 40px;
-        padding-left: 16px;
-        padding-right: 16px;
+      font-size: 10px;
+      line-height: 40px;
     }
-    
-    &__sign {
-        color: #fff;
-        font-size: 14px;
-        font-weight: bold;
-        letter-spacing: -0.006em;
-        line-height: 80px;
+  }
 
-        @include Tablet {
-            font-size: 12px;
-            line-height: 60px;
-        }
+    ::before {
+      content: "\00a9";
+      font-size: 14px;
+      line-height: 11px;
+      letter-spacing: -0.006em;
+      color: #FFFFFF;
 
-        @include Phone {
-            font-size: 10px;
-            line-height: 40px;
-        }
+      @include Tablet {
+        font-size: 12px;
+        line-height: 5px;
+      }
+
+      @include Phone {
+        font-size: 10px;
+        line-height: 3px;
+      }
     }
-
-        ::before {
-            content: "\00a9";
-            font-size: 14px;
-            line-height: 11px;
-            letter-spacing: -0.006em;
-            color: #FFFFFF;
-
-            @include Tablet {
-                font-size: 12px;
-                line-height: 5px;
-            }
-
-            @include Phone {
-                font-size: 10px;
-                line-height: 3px;
-            }
-        }
 }

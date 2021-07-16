@@ -1,20 +1,11 @@
-
-$color-blue : #62D0DF;
-
 * {
   box-sizing: border-box;
 }
 
 .page__body {
-  position: fixed;
-  margin: 0 auto;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
-  
+  margin: 0;
   
   &-menu {
     position: fixed;
@@ -25,12 +16,11 @@ $color-blue : #62D0DF;
     transition: transform 0.3s;
 
     &:target {
-      transform: translateX(0);
-      
+      transform: translateX(0);   
     }
   }
-
 }
+
 
 
 
