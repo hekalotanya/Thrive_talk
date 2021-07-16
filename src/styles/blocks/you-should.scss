@@ -1,5 +1,6 @@
 .section__you-should {
-  display: flex;   
+  display: flex;  
+  justify-content: space-around; 
 }
 
 .you-should {
@@ -12,7 +13,8 @@
 
   @include Full {
     width: 1080px;
-    padding-left: 175px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @include Tablet {
@@ -35,8 +37,8 @@
     justify-content: space-evenly;
 
     @include Desktop {
-      // width: 100%;
       padding-left: 30px;
+      max-width: 676px;
     }
 
     @include Tablet {

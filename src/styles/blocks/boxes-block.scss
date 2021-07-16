@@ -30,6 +30,8 @@
 
   @include Full {
     width: 1080px;
+    padding-left: 0;
+    padding-right: 0;  
   }
 
   .item {

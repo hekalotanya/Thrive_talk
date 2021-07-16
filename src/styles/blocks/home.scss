@@ -15,19 +15,21 @@
   padding-top: 16px;
 
   @include Full {
-  width: 1080px;
+    width: 1080px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   @include Tablet {
-  height: max-content;
-  padding-left: 30px;
-  padding-right: 30px;
+    height: max-content;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   @include Phone {
-  height: 100vh;
-  padding-left: 16px;
-  padding-right: 16px;
+    height: 100vh;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 

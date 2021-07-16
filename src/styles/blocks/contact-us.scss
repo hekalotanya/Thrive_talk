@@ -21,7 +21,8 @@
 
   @include Full {
     width: 1080px;
-    padding-right: 175px;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   @include Tablet {
