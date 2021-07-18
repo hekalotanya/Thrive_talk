@@ -1,0 +1,33 @@
+.footer {
+  height: 80px;
+  padding: 0 175px;
+
+  @include Full {
+    width: 1080px;
+    padding: 0;
+  }
+
+  @include Tablet {
+    height: 80px;
+    padding: 0 30px;
+  }
+
+  @include Phone {
+    height: 80px;
+    padding: 0 15px;
+  }
+  
+  &__sign {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -0.006em;
+    line-height: 80px;
+  }
+
+    ::before {
+      content: "\00a9";
+      font-size: 14px;
+      color: #FFFFFF;
+    }
+}

@@ -1,0 +1,54 @@
+.boxes-white {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, 240px);
+  padding: 22px 175px 0;
+  width: 100vw;
+
+  @include Tablet {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, 240px);
+    padding: 22px 30px 0;
+  }
+
+  @include Phone {
+    padding: 10px 15px 0;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(6, 240px);
+  }
+
+  @include Full {
+    width: 1080px;
+    padding: 10px 0;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    padding-right: 15px;
+    
+    &__title {
+      font-size: 28px;
+      line-height: 33px;
+      letter-spacing: -0.03em;
+      color: #22356f;
+    }
+
+    &__text {
+      max-width: 298px;
+      font-size: 16px;
+      line-height: 25px;
+      letter-spacing: -0.03em;
+      color: rgba(34, 53, 111, 0.5);
+
+      @include Tablet {
+        max-width: 298px;
+      }
+
+      @include Phone {
+        width: 100%;
+      }
+    }
+  }
+}

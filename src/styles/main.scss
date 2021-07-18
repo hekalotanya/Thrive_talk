@@ -1,7 +1,14 @@
 @import "utils";
-@import "fonts";
-@import "typography";
+@import "blocks/home";
+@import "blocks/page";
+@import "blocks/why";
+@import "blocks/about-us";
+@import "blocks/boxes";
+@import "blocks/boxes-block";
+@import "blocks/you-should";
+@import "blocks/contact-us";
+@import "blocks/some-info";
+@import "blocks/footer";
+@import "blocks/menu-phone";
 
-body {
-  background: $c-gray;
-}
+@import "fonts";

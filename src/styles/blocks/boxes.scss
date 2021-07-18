@@ -1,0 +1,101 @@
+.boxes {    
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2);
+  margin-top: 120px;
+
+  @include Tablet {
+    margin-top: 60px;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3);
+  }
+
+  @include Phone {
+    margin-top: 40px;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(6);
+  }
+
+  @include Full {
+    width: 1440px;
+    margin: 0 auto;
+  }
+  
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 480px;
+    background-color: #22356F;
+    transform: scale(1);
+    transition: transform 0.3s;    
+
+    @include Tablet {
+      height: 480px;
+    }
+
+    @include Phone {
+      height: 240px;
+    }
+      
+      &-circle {
+        margin-top: 14px;
+        margin-left: 12px;
+        margin-right: 15px;
+        height: 12px;
+        width: 12px;
+        background-color: #E9B730;;
+        border-radius: 100%;    
+      }
+
+      &-text {
+        display: flex;
+        box-sizing: border-box;
+        margin-top: 72px;
+        padding-top: 23px;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 34px;
+        letter-spacing: -0.006em;
+        color: #FFFFFF;
+        width: 340px;
+        border-top: 1px solid #fff;
+
+        @include Tablet {
+          width: 300px;
+        }
+
+        @include Phone {
+          font-size: 28px;
+          width: 300px;
+        }
+      }
+  }
+
+  &__item:hover {
+    transform: scale(0.9);
+  }
+
+  :nth-child(2) {
+    background-color: #0052C1;
+  }
+
+  :nth-child(3) {
+    background-image: url(https://www.capitalr2r.co.uk/wp-content/uploads/sites/209/2018/10/joanna-kosinska-340748-unsplash-e1538145940437.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  :nth-child(4) {
+    background-color: $color-blue;
+  }
+
+  :nth-child(5) {
+    background-color: #DEE1FF;
+  }
+
+  :nth-child(6) {
+    background-color: #8F00FF;
+  }
+}

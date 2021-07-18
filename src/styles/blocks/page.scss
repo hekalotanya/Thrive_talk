@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  font-family: "Larsseit-family", Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  margin: 0;
+  overflow-x: hidden;
+  
+  &-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+
+    &:target {
+      transform: translateX(0);
+    }
+
+  }
+
+  &__about-us {
+    display: grid;
+  }
+
+  &__boxes-white {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__contact-us {
+    background-color: #22356f;
+    display: flex;
+  }
+
+  &__footer {
+    display: grid;
+    background-color: $color-blue;
+  
+    @include Full {
+      justify-content: space-around;
+    }
+  }
+
+  &__home {
+    background-color: #f4f9e2;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 80px;
+  }
+
+  &__some-info {
+    display: flex;
+    justify-content: space-around;
+  
+    @include DesktopDown {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__why {
+    background-color: $color-blue;
+    display: flex;
+    justify-content: space-around;
+  
+    @include DesktopDown {
+      justify-content: center;
+    }
+  }
+
+  &__you-should {
+    display: flex;
+    justify-content: space-around;
+  }
+}
