@@ -16,7 +16,6 @@
     @include Full {
       padding: 0;
     }
-    
 
     @include Tablet {
       padding: 28px 30px 0;
@@ -26,17 +25,17 @@
       padding: 20px 15px 0;
       flex-direction: column;
     }
-    
+
     @include Full {
       width: 1080px;
     }
-  
+
     &__title {
       margin: 0;
       font-size: 16px;
       line-height: 23px;
       letter-spacing: 0.06em;
-      color: #22356F;
+      color: #22356f;
       text-transform: uppercase;
       margin-right: 20px;
 
@@ -49,8 +48,8 @@
       width: 592px;
       font-size: 24px;
       line-height: 34px;
-      letter-spacing: 0.005em;
-      color: #22356F;
+      letter-spacing: 0.01em;
+      color: #22356f;
 
       @include Phone {
         width: 100%;
@@ -80,7 +79,7 @@
 .square {
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  margin-top: 24px; 
+  margin-top: 24px;
   overflow: hidden;
 
   @include Tablet {
@@ -94,18 +93,18 @@
     grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(4,auto);
   }
-  
+
   @include Full {
     width: 1440px;
     margin: 0 auto;
   }
-   
+
   .item {
     display: flex;
     flex-direction: column;
     height: 360px;
     align-items: center;
-    background-color: #FFE2DE;
+    background-color: #ffe2de;
     transform: scale(1);
     transition: transform 0.3s;
 
@@ -118,7 +117,7 @@
       margin-right: 15px;
       height: 9px;
       width: 9px;
-      background-color: #E9B730;;
+      background-color: #e9b730;
       border-radius: 100%;
     }
 
@@ -129,27 +128,26 @@
       font-size: 32px;
       font-weight: bold;
       line-height: 34px;
-      letter-spacing: -0.006em;
-      color: #FFFFFF;
+      letter-spacing: -0.01em;
+      color: #fff;
       width: 232px;
       border-top: 1px solid #fff;
     }
-  }
 
-  .item:hover {
-    transform: scale(0.9);
-  }
+    &:hover {
+      transform: scale(0.9);
+    }
 
+    &:nth-child(2) {
+      background-color: #c4e769;
+    }
 
-  :nth-child(2) {
-    background-color: #C4E769;
-  }
+    &:nth-child(3) {
+      background-color: $color-blue;
+    }
 
-  :nth-child(3) {
-    background-color: $color-blue;
-  }
-
-  :nth-child(4) {
-    background-color: #0052C1;
+    &:nth-child(4) {
+      background-color: #0052c1;
+    }
   }
 }

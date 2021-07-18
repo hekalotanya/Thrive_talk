@@ -3,24 +3,23 @@
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, 240px);
   padding: 22px 175px 0;
-  width: 100vw;  
+  width: 100vw;
 
   @include Tablet {
-    padding-top: 11px;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(3, 240px);
     padding: 22px 30px 0;
   }
 
   @include Phone {
-    padding: 7px 15px 0;
+    padding: 10px 15px 0;
     grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(6, 240px);
   }
 
   @include Full {
     width: 1080px;
-    padding: 7px 0; 
+    padding: 10px 0;
   }
 
   .item {
@@ -33,8 +32,7 @@
       font-size: 28px;
       line-height: 33px;
       letter-spacing: -0.03em;
-      color: #22356F;
-      font-weight: normal;
+      color: #22356f;
     }
 
     &__text {
@@ -46,10 +44,10 @@
 
       @include Tablet {
         max-width: 298px;
-    }
+      }
 
       @include Phone {
-        width: 100vw;
+        width: 100%;
       }
     }
   }
