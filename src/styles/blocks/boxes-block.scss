@@ -1,43 +1,33 @@
-.section__boxes-white {
-  display: flex;
-  justify-content: space-around;    
-}
-
 .boxes-white {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, 240px);
-  margin-top: 22px;
-  width: 100vw;
-  padding-left: 175px;
-  padding-right: 175px;    
+  padding: 22px 175px 0;
+  width: 100vw;  
 
   @include Tablet {
-    margin-top: 11px;
+    padding-top: 11px;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(3, 240px);
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 22px 30px 0;
   }
 
   @include Phone {
-    margin-top: 7px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 7px 15px 0;
     grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(6, 240px);
   }
 
   @include Full {
     width: 1080px;
-    padding-left: 0;
-    padding-right: 0;  
+    padding: 7px 0; 
   }
 
   .item {
     display: flex;
     flex-direction: column;
     justify-self: center;
+    padding-right: 15px;
     
     &__title {
       font-size: 28px;
@@ -45,16 +35,6 @@
       letter-spacing: -0.03em;
       color: #22356F;
       font-weight: normal;
-
-      @include Tablet {
-        font-size: 28px;
-        line-height: 33px;
-      }
-
-      @include Phone {
-        font-size: 28px;
-        line-height: 33px;
-      }
     }
 
     &__text {
@@ -66,14 +46,10 @@
 
       @include Tablet {
         max-width: 298px;
-        font-size: 16px;
-        line-height: 25px;
     }
 
       @include Phone {
         width: 100vw;
-        font-size: 16px;
-        line-height: 25px;
       }
     }
   }

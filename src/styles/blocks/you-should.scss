@@ -1,12 +1,6 @@
-.section__you-should {
-  display: flex;  
-  justify-content: space-around; 
-}
-
 .you-should {
   margin-top: 40px;
   display: flex;
-  flex-direction: row;
   height: 800px;
   width: 100vw;
   padding-right: 175px;
@@ -52,8 +46,8 @@
 
     @include Phone {
       width: 100%;
-      padding-left: 16px;
-      padding-right: 16px;
+      padding-left: 15px;
+      padding-right: 15px;
       height: 600px;
     }
     
@@ -62,18 +56,9 @@
       line-height: 23px;
       letter-spacing: 0.06em;
       color: #22356F;
-
-      @include Tablet {
-        font-size: 16px;
-      }
-
-      @include Phone {
-        font-size: 16px;
-      }
     }
 
     &__text {
-      // width: 100%;
       font-size: 36px;
       font-weight: bold;
       line-height: 53px;
@@ -83,7 +68,6 @@
       @include Tablet {
         font-size: 30px;
         line-height: 40px;
-        // width: 100%;
       }
 
       @include Phone {
@@ -92,7 +76,7 @@
         width: 100%;
       }
 
-      span {
+      .email-text {
         color: $color-blue;
       }
     }
@@ -109,21 +93,11 @@
         align-items: center;
         letter-spacing: 0.1em;
         color: #FAB63E;
-        transition: all 0.3s;
-
-        @include Tablet {
-          font-size: 16px;
-          line-height: 23px;
-        }
-
-        @include Phone {
-          font-size: 16px;
-          line-height: 23px;
-        }
+        transition: color 0.3s;
       }
 
       &__link:hover {
-        color: darken($color:#FAB63E, $amount: 10);
+        color: darken(#FAB63E, 10);
       }
     }
   }
@@ -139,12 +113,10 @@
     .image {
       width: 100%;
       height: 800px;
-      background-image: url(https://i2.wp.com/www.sebazzo.com/wp-content/uploads/2018/02/linkedin-sales-navigator-402831.jpg?fit=800%2C1200&ssl=1);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
+      object-position: center;
+      object-fit: cover;
       transform: scale(1);
-      transition: all 0.3s;
+      transition: transform 0.3s;
 
       @include Tablet {
         height: 600px;

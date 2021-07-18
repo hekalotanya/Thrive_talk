@@ -28,7 +28,7 @@
     height: 480px;
     background-color: #22356F;
     transform: scale(1);
-    transition: all 0.3s;    
+    transition: transform 0.3s;    
 
     @include Tablet {
       height: 480px;

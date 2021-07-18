@@ -1,35 +1,24 @@
-.section__home {
-  background-color: #F4F9E2;
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 79px;    
-}
-
 .home {
   display: flex;
   flex-direction: column;
   height: 840px;
   width: 100vw;
-  padding-left: 175px;
-  padding-right: 175px;
-  padding-top: 16px;
+  padding: 15px 175px 0;
+  overflow: hidden;
 
   @include Full {
     width: 1080px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding: 15px 0;
   }
 
   @include Tablet {
     height: max-content;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 15px 30px 0;
   }
 
   @include Phone {
-    height: 100vh;
-    padding-left: 16px;
-    padding-right: 16px;
+    height: max-content;
+    padding: 15px 15px 0;
   }
 }
 
@@ -49,35 +38,31 @@
       letter-spacing: -0.035em;
       color: $color-blue;
       text-decoration: none;
-      transition: all 0.3s;
+      transition: color 0.3s;
     }
 
     &__link:hover {
-      color: darken($color:$color-blue, $amount: 10);
+      color: darken($color-blue, 10);
     }
   }
   .icon {
     display: none;
     transform: scale(1);
-    transition: all 0.3s;
+    transition: transform 0.3s;
+    padding: 2px;
 
     .icon__items {
       display: flex;
       flex-direction: column;
-
+      
       .item {
-         margin-bottom: 3px;
+        margin-bottom: 3px;
         width: 30px;
         height: 2px;
         background-color: $color-blue;
         border-radius: 30%;
-        transition: all 0.3s;
+        transition: color 0.3s;
       }
-
-      .item:hover {
-        background-color: darken($color: $color-blue, $amount: 10);
-      }
-
     }
 
     @include Phone {
@@ -116,7 +101,7 @@
       box-sizing: border-box;
       padding-bottom: 3px;
       border-bottom: 2px solid transparent;
-      transition: all 0.3s;
+      transition: border-bottom 0.3s;
     }
 
     .menu__item:hover {
@@ -132,7 +117,7 @@
     border-radius: 50px;
     background-color: $color-blue;
     z-index: 1;
-    transition: all 0.3s;
+    transition: background-color 0.3s;
 
     @include Phone {
       width: 90px;
@@ -152,10 +137,10 @@
       font-size: 11px;
       }
     }
-  }
 
-  .button:hover {
-    background-color: darken($color:$color-blue, $amount: 10);
+    &:hover {
+      background-color: darken($color-blue, 10);
+    }
   }
 }
 
@@ -182,85 +167,105 @@
         letter-spacing: -0.035em;
         color: $color-blue;
         text-decoration: none;
-        transition: all 0.3s;    
+        transition: color 0.3s;    
       }
 
       &__link:hover {
-        color: darken($color:$color-blue, $amount: 10);
-      }            
+        color: darken($color-blue, 10);
+      } 
+      
+      @include Phone {
+        display: none;
+      }
     }
+  }
 
-    .content__title {
+  .content {
+    &__title {
       height: 168px;
       font-size: 48px;
       line-height: 53px;
       letter-spacing: -0.035em;
       color: #22356F;
       font-weight: bold;
-
+    
       @include Phone {
         font-size: 23px;
         line-height: 30px;
         height: 100px;
       }
     }
-
-    .content__text {
+  
+    &__text {
       width: 469px;
       font-size: 24px;
       line-height: 42px;
       color: #22356F;
-
+  
       @include Phone {
         height: max-content;
         width: 70vw;
         font-size: 20px;
         line-height: 34px;
       }
-
+  
       @include Tablet {
         height: max-content;
       }
     }
-
-    .content__button {
+  
+    &__buttons {
       margin-top: 64px;
-      display: flex;
-      
+  
+      @include Phone {
+        margin-top: 30px;
+      }
+  
       @include Tablet {
         margin-top: 45px;
       }
+    }
+  }
 
+  .buttons {
+    display: flex;
+  
+    @include Phone {
+      flex-direction: column;
+    }
+  
+    &__button {
+      padding: 0;
+      height: 50px;
+      width: 150px;
+      font-size: 16px;
+      line-height: 50px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      color: #F9B640;
+      text-decoration: none;
+      background-color: #F4F9E2;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.4s;
+      border: 1px solid #f9b640;
+  
       @include Phone {
-        margin-top: 30px;
-        flex-direction: column;
-      }
-
-      .button__button {
-        padding: 0;
-        height: 50px;
-        width: 150px;
-        font-size: 16px;
-        line-height: 50px;
-        text-align: center;
-        letter-spacing: 0.1em;
-        color: #F9B640;
-        text-decoration: none;
-        background-color: #F4F9E2;
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: all 0.4s;
-        margin-right: 38px;
-        border: 1px solid #f9b640;
-
-        @include Phone {
-          font-size: 14px;
+        font-size: 14px;
+        width: 100%;
+  
+        &:not(:last-child) {
           margin-bottom: 20px;
-          width: 100%;
         }
       }
-      
-      .button__button:hover {
+  
+      @include Tablet {
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+      }
+  
+      &:hover {
         background-color: #F9B640;
         color: #F4F9E2;
       }
@@ -268,9 +273,8 @@
   }
 }
 
-.right {
 
-  &__circle {
+  .right__circle {
     position: absolute;
     right: -166px;
     top: 40px;
@@ -342,4 +346,4 @@
       }
     }
   }
-}
+  

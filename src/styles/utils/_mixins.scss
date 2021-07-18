@@ -15,15 +15,7 @@
 
 @mixin Tablet {
 
-  @media (min-width:641px) and (max-width:1023px)  {
-    @content;
-  }
-  
-}
-
-@mixin Full {
-
-  @media (min-width:1441px)  {
+  @media (min-width:641px) {
     @content;
   }
   
@@ -32,6 +24,30 @@
 @mixin Desktop {
 
   @media (min-width:1024px)  {
+    @content;
+  }
+  
+}
+
+@mixin DesktopDown {
+
+  @media (max-width:1024px)  {
+    @content;
+  }
+
+}
+
+@mixin Full {
+
+  @media (min-width:1440px)  {
+    @content;
+  }
+  
+}
+
+@mixin FullDown {
+
+  @media (max-width:1440px)  {
     @content;
   }
   

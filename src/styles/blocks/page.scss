@@ -2,10 +2,11 @@
   box-sizing: border-box;
 }
 
-.page__body {
+.body {
   font-family: "Larsseit-family"; 
   scroll-behavior: smooth;
   margin: 0;
+  overflow-x: hidden;
   
   &-menu {
     position: fixed;
@@ -18,6 +19,61 @@
     &:target {
       transform: translateX(0);   
     }
+  }
+
+  &__about-us {
+    display: grid;
+  }
+
+  &__boxes-white {
+    display: flex;
+    justify-content: space-around;    
+  }
+
+  &__contact-us {
+    background-color: #22356F;
+    display: flex;  
+  }
+
+  &__footer {
+    display: grid;
+    background-color: $color-blue;
+  
+    @include Full {
+      justify-content: space-around;
+    }
+  }
+
+  &__home {
+    background-color: #F4F9E2;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 79px;   
+  }
+
+  &__some-info {
+    display: flex;   
+    justify-content: space-around;
+  
+    @include DesktopDown  {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__why {    
+    background-color: $color-blue;
+    display: flex;   
+    justify-content: space-around;
+  
+    @include DesktopDown {
+      justify-content: center;
+    }
+  }
+
+  &__you-should {
+    display: flex;  
+    justify-content: space-around; 
   }
 }
 

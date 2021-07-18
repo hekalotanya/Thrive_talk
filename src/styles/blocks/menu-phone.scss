@@ -1,16 +1,16 @@
 .menu-phone {
-  padding: 16px;
+  padding: 15px;
   background-color: #fff;
   height: 100vh;
   z-index: 2;
   
   .icon {
     transform: scale(1);
-    transition: all 0.3s;
-    width: max-content;
-    height: max-content;
+    transition: transform 0.3s;
+    
     
     .icon__items {
+      padding: 15px 10px;
       
       .item:nth-child(1) {
         transform: rotate(45deg);
@@ -32,7 +32,6 @@
   display: flex;
   flex-direction: column;
   margin-top: 30px;
-  width: max-content;
 
   .item {
     text-decoration: none;
@@ -41,7 +40,7 @@
     line-height: 80px;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: font-size 0.3s;
   }
 
   .item:hover {

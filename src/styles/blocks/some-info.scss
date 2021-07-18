@@ -1,34 +1,10 @@
-.section__some-info {
-  display: flex;   
-  justify-content: space-around;
-
-  @include Tablet  {
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-
-  @include Phone  {
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-}
-
 .some-info {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: 100vw;
   padding-right: 175px;
 
-  @include Phone {
-    height: max-content;
-    flex-direction: column;
-    width: 100vw;
-    justify-content: center;
-    padding-right: 0;
-  }
-
-  @include Tablet {
+  @include DesktopDown {
     height: max-content;
     flex-direction: column;
     width: 100vw;
@@ -62,13 +38,12 @@
     }
 
     .image {
-      height: 380px;
+      height: 100%;
       width: 100%;
-      background-image: url(http://www.drqdentalsd.com/wp-content/uploads/2015/11/autumn-goodman-242825-1500px.jpg);
-      background-position: center;
-      background-size: cover;
+      object-position: center;
+      object-fit: cover;
       transform: scale(1);
-      transition: all 0.3s;
+      transition: transform 0.3s;
     }
 
     .image:hover {
@@ -117,13 +92,11 @@
 
         @include Tablet {
           height: 24px;
-          font-size: 14px;
           margin-bottom: 35px;
         }
 
         @include Phone {
           height: 14px;
-          font-size: 14px;
           margin-bottom: 23px;
         }
       }
@@ -135,34 +108,24 @@
         text-decoration: none;
         color: rgba(34, 53, 111, 0.5);
 
-        @include Tablet {
-          font-size: 14px;
-          line-height: 23px;
-        }
-
-        @include Phone {
-          font-size: 14px;
-          line-height: 23px;
-        }
-
         .tel {
           text-decoration: none;
           color: rgba(34, 53, 111, 0.5);
-          transition: all 0.3s;
-        }
+          transition: color 0.3s;
 
-        .tel:hover {
-          color: darken($color: rgba(34, 53, 111, 0.5), $amount: 40);
+          &:hover {
+            color: darken(rgba(34, 53, 111, 0.5), 40);
+          }
         }
 
         .email {
           text-decoration: none;
           color: $color-blue;
-          transition: all 0.3s;
-        }
+          transition: color 0.3s;
 
-        .email:hover {
-          color: darken($color: $color-blue, $amount: 10);
+          &:hover {
+            color: darken($color-blue, 10);
+          }
         }
       }
     }
